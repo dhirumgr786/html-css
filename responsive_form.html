@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Responsive Form </title>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=password], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color:lightblue;
+}
+
+.container {
+  border-radius: 5px;
+  background-image: url("My Post.jpg");
+  padding: 100px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 768px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<p> WELCOME </p>
+
+<div class="container">
+<div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="First Name">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Last Name">
+    </div>
+    </div>
+    <div class="row">
+     <div class="col-25">
+   <label for="password"> Password </label>
+   </div>
+    <div class="col-75">
+     <input type="password" id="password" name="password" placeholder="Password">
+    </div>
+    </div>
+  <div class="row">
+   <div class="col-25">
+  <label for="Gender"> Gender </label>
+   </div>
+    <div class="col-75">
+  <input type="radio" name="gender" value="male" checked> Male
+  <input type="radio" name="gender" value="female"> Female
+  <input type="radio" name="gender" value="other"> Other
+    </div>
+    </div>
+<div class="row">
+    <div class="col-25">
+      <label for="state"> State </label>
+    </div>
+    <div class="col-75">
+      <select id="state" name="state">
+        <option value="New Delhi"> New Delhi </option>
+        <option value="Haryana"> Haryana </option>
+        <option value="Punjab"> Punjab </option>
+        <option value="Uttar Pradesh"> Uttar Pradesh </option>
+        <option value="Assam"> Assam </option>
+        <option value="Manipur"> Manipur </option>
+        <option value="Nagaland"> Nagaland </option>
+        <option value="Sikkim"> Sikkim </option>
+      </select>
+    </div>
+    <div class="row">
+    <input type="submit" onclick="alert('Thank You')" value="Submit">
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
